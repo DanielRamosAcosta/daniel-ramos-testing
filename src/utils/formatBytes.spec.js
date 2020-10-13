@@ -1,19 +1,28 @@
-const formatBytes = require("./formatBytes");
+import formatBytes from "./formatBytes";
 
-assertEquals(formatBytes(0), "");
-assertEquals(formatBytes(900), "900MB");
-assertEquals(formatBytes(1900), "1GB 900MB");
-// assertEquals(formatBytes(1000), "1GB");
-assertEquals(formatBytes(2900), "2GB 900MB");
-assertEquals(formatBytes(568200), "568GB 200MB");
-assertEquals(formatBytes(1234567), "1TB 234GB 567MB");
+describe("formatBytes", () => {
+  it.skip("formats in MBs", () => {
+    const result1 = formatBytes(0);
+    expect(result1).toEqual("0MB");
+  });
 
-function assertEquals(result, expectedResult) {
-  if (result !== expectedResult) {
-    throw new Error(
-      `This test is failing: Expected "${expectedResult}", got "${result}"`,
-    );
-  }
-}
+  it("formats in MBs", () => {
+    const result1 = formatBytes(900);
+    expect(result1).toEqual("900MB");
+  });
 
-console.log("All OK");
+  it("formats in GBs", () => {
+    const result2 = formatBytes(2000);
+    expect(result2).toEqual("2GB");
+  });
+
+  it("formats in TBs", () => {
+    const result2 = formatBytes(1000000);
+    expect(result2).toEqual("1TB");
+  });
+
+  it("formats in all of the previous", () => {
+    const result2 = formatBytes(1234567);
+    expect(result2).toEqual("1TB 234GB 567MB");
+  });
+});

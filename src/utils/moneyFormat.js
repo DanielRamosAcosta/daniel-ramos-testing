@@ -1,4 +1,4 @@
-function moneyFormat(number) {
+export default function moneyFormat(number) {
   if (number === Math.round(number)) {
     return formatWithDollar(number) + ".00";
   }
@@ -9,5 +9,3 @@ function moneyFormat(number) {
 function formatWithDollar(number) {
   return "$" + number.toLocaleString("en-US");
 }
-
-module.exports = moneyFormat;

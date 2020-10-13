@@ -10,7 +10,7 @@ const formatMap = [
   { breakpoint: 1, formatFn: formatMb },
 ];
 
-function formatBytes(megaBytes) {
+export default function formatBytes(megaBytes) {
   if (megaBytes === 0) {
     return "";
   }
@@ -24,5 +24,3 @@ function formatBytes(megaBytes) {
     return concatIfNotEmpty(format.formatFn(reminder), formatBytes(value));
   }
 }
-
-module.exports = formatBytes;

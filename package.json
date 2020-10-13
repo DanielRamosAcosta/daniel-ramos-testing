@@ -28,6 +28,7 @@
     "@babel/node": "^7.10.5",
     "@babel/plugin-proposal-class-properties": "7.10.4",
     "@babel/plugin-transform-modules-commonjs": "7.10.4",
+    "@types/jest": "^26.0.14",
     "babel-jest": "^26.3.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "6.11.0",
