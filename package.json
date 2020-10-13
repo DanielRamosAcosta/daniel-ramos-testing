@@ -43,7 +43,9 @@
       "./node_modules",
       "./src"
     ],
-    "modulePathIgnorePatterns": ["<rootDir>/build/"],
+    "modulePathIgnorePatterns": [
+      "<rootDir>/build/"
+    ],
     "moduleFileExtensions": [
       "ts",
       "tsx",
