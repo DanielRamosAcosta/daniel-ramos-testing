@@ -13,7 +13,7 @@
   "scripts": {
     "build": "babel src -x .js -d build",
     "start": "node build/app.js",
-    "start:dev": "nodemon --exec babel-node src/app.js",
+    "start:dev": "nodemon --exec babel-node src/app.js --banned-words-path ./examples/banned-words.txt --text-path ./examples/text.txt --output ./examples/censored-text.txt",
     "lint": "eslint --ext .js ./src",
     "lint:fix": "eslint --ext .js --fix ./src",
     "test": "jest",
